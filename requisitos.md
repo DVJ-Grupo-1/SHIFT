@@ -5,7 +5,7 @@
 - Se realizarán 3 sesiones de proyecto durante el curso:
   - **6 nov.**: definición y planificación del juego (Game Design Document).
   - **4 dic.**: programación del prototipo.
-- La temática central del juego debe ser **"WAVES"**.
+- La temática central del juego debe ser **"SHIFT"**.
 - El juego debe incorporar al menos un elemento de **inteligencia artificial** que afecte al gameplay o a la narrativa.
 - El juego debe ser ejecutable en la plataforma objetivo: **Windows PC**.
 
