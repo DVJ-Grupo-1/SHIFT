@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cvmah8tyv0a3u"]
+
+[ext_resource type="Script" uid="uid://dvbandp3mc4eg" path="res://Scenes/goofyahrobot.gd" id="1_0xugt"]
+[ext_resource type="Texture2D" uid="uid://dh0eoa2gmmpvg" path="res://Art/robotGoofy/Right sprite sheet sin sombra.png" id="1_mv1qq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xugt"]
+atlas = ExtResource("1_mv1qq")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5umc"]
+atlas = ExtResource("1_mv1qq")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cel3"]
+atlas = ExtResource("1_mv1qq")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4thmy"]
+atlas = ExtResource("1_mv1qq")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgjci"]
+atlas = ExtResource("1_mv1qq")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_badhc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xugt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5umc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cel3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4thmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgjci")
+}],
+"loop": 1,
+"name": &"iddle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ug7u"]
+radius = 6.0
+height = 22.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=165857680]
+script = ExtResource("1_0xugt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1482571895]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_badhc")
+animation = &"iddle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1996228199]
+shape = SubResource("CapsuleShape2D_8ug7u")
